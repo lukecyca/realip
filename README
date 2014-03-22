@@ -1,0 +1,10 @@
+realip
+Replaces RemoteAddr with the real client IP when proxied through a trusted proxy
+
+Inspired by:
+* https://groups.google.com/forum/#!msg/golang-nuts/lomWKs0kOfE/gwmoD3cTxesJ
+* http://www.stderr.net/apache/rpaf/
+
+You must trust that your trusted proxies give an accurate X-Forwarded-For. That
+means they should strip the X-Forwarded-For header on incoming requests unless
+they have reason to trust it and can vouch for it.
